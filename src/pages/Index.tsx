@@ -1,4 +1,7 @@
 import { MessageSquare, Palette, Users, Utensils, Phone, Globe, BarChart3, Cpu } from "lucide-react";
+import ProductSlider from "../components/ProductSlider";
+import ProductNavigation from "../components/ProductNavigation";
+import { useProductSlider } from "../hooks/useProductSlider";
 
 const Index = () => {
   const products = [
@@ -68,101 +71,38 @@ const Index = () => {
     }
   ];
 
+  const { currentIndex, scrollToProduct } = useProductSlider(products.length);
+
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary via-blue-600 to-blue-700 py-16 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            我们的产品
-          </h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            八大核心产品矩阵，覆盖AI智能体、多媒体处理、数据分析和智能硬件等领域
-          </p>
-        </div>
-      </section>
-
-      {/* Products Grid */}
-      <section className="py-16 px-4 bg-gray-50">
-        <div className="max-w-[1400px] mx-auto">
-          <div className="space-y-8">
-            {products.map((product, index) => {
-              const IconComponent = product.icon;
-              return (
-                <div key={index} className="group">
-                  <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
-                    <div className="grid grid-cols-1 lg:grid-cols-8 gap-8 items-center">
-                      {/* 左侧内容 */}
-                      <div className="space-y-6 lg:col-span-5">
-                        <div className="flex items-start justify-between">
-                          <div className="flex items-center gap-4">
-                            <div className={`w-12 h-12 ${product.iconColor} rounded-xl flex items-center justify-center`}>
-                              {product.title === "VidLingual多语言翻译工具" ? (
-                                <img src="/lovable-uploads/12db14f5-4309-4dc4-9981-7aa0e853233c.png" alt="Video icon" className="w-6 h-6" />
-                              ) : (
-                                <IconComponent className="w-6 h-6 text-white" />
-                              )}
-                            </div>
-                            <div>
-                              <h3 className="text-2xl font-bold text-gray-900 mb-1">{product.title}</h3>
-                              <p className="text-sm text-gray-500 font-medium uppercase tracking-wide">{product.subtitle}</p>
-                            </div>
-                          </div>
-                          <div className="text-gray-400 group-hover:text-gray-600 group-hover:translate-x-1 transition-all">
-                            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                              <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                            </svg>
-                          </div>
-                        </div>
-                        
-                        <p className="text-gray-600 leading-relaxed text-lg">{product.description}</p>
-                        
-                        <div className="grid grid-cols-2 gap-3">
-                          {product.features.map((feature, featureIndex) => (
-                            <div key={featureIndex} className="flex items-center text-sm">
-                              <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></div>
-                              <span className="text-gray-700">{feature}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                      
-                      {/* 右侧图片 */}
-                      <div className="relative h-64 lg:h-80 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 rounded-xl overflow-hidden lg:col-span-3">
-                        <img 
-                          src={product.title === "Claymore聊天智能体" ? "/lovable-uploads/29bbd104-a828-4728-b204-b0995826e1e5.png" : product.title === "绘画智能体" ? "/lovable-uploads/ccac6ac9-4166-4947-afaa-4771687a9eff.png" : product.title === "换脸智能体" ? "/lovable-uploads/805d49ac-22eb-45c0-b51b-06c840c620d4.png" : product.title === "智能硬件ESP32开发板" ? "/lovable-uploads/2a09496d-0a60-4d07-a634-803c7ba0ef26.png" : product.title === "TikTok直播数据获取工具" ? "/lovable-uploads/7eeaf74c-c58f-40b9-be5d-7757d1586572.png" : product.title === "VidLingual多语言翻译工具" ? "/lovable-uploads/89e6d498-5788-4574-b8b2-6ad46bf8b710.png" : product.title === "电话外呼智能体" ? "/lovable-uploads/66e42bea-a48f-4141-9f5b-58860fd31d51.png" : product.title === "Claymore智能菜单" ? "/lovable-uploads/1ef9462a-4977-41ba-9ccb-cb4e845d3b95.png" : "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2"} 
-                          alt={product.title}
-                          className={`w-full h-full object-cover ${product.title === "电话外呼智能体" ? "object-left" : product.title === "VidLingual多语言翻译工具" ? "object-top" : ""}`}
-                        />
-                        
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">开启AI智能化之旅</h2>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+    <div className="relative">
+      {/* 产品滑动区域 */}
+      <ProductSlider products={products} currentIndex={currentIndex} />
+      
+      {/* 右侧导航 */}
+      <ProductNavigation 
+        products={products} 
+        currentIndex={currentIndex} 
+        onProductSelect={scrollToProduct}
+      />
+      
+      {/* 底部CTA - 固定在最后一个产品后 */}
+      <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 px-4">
+        <div className="max-w-4xl mx-auto text-center text-white">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">开启AI智能化之旅</h2>
+          <p className="text-xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed">
             我们的产品矩阵覆盖了从对话交互到视觉创作，从数据分析到硬件开发的全方位AI解决方案。每一个产品都经过精心打磨，致力于为用户提供最优质的智能化体验。
           </p>
           
           <div className="flex flex-wrap justify-center gap-8 mb-12">
             {["全球化部署", "高性能处理", "企业级安全"].map((feature, index) => (
-              <div key={index} className="flex items-center text-gray-600">
-                <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                <span>{feature}</span>
+              <div key={index} className="flex items-center text-white/70">
+                <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                <span className="text-lg">{feature}</span>
               </div>
             ))}
           </div>
           
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-medium text-lg transition-all duration-300 hover:shadow-lg">
+          <button className="bg-white/20 backdrop-blur-sm border border-white/30 hover:bg-white/30 text-white px-10 py-5 rounded-xl font-medium text-xl transition-all duration-300 hover:shadow-lg hover:scale-105">
             联系我们了解更多
           </button>
         </div>
