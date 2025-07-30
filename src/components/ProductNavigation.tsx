@@ -27,14 +27,14 @@ const ProductNavigation = ({ products, currentIndex, onProductSelect }: ProductN
               className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg ${
                 isActive 
                   ? `${product.iconColor} shadow-xl` 
-                  : 'bg-white/90 backdrop-blur-sm border border-gray-200 hover:bg-white hover:shadow-xl'
+                  : 'bg-white/20 backdrop-blur-sm border border-white/30 hover:bg-white/30'
               }`}
               title={product.title}
             >
               {product.title === "VidLingual多语言翻译工具" ? (
                 <img src="/lovable-uploads/12db14f5-4309-4dc4-9981-7aa0e853233c.png" alt="Video icon" className="w-6 h-6" />
               ) : (
-                <IconComponent className={`w-6 h-6 ${isActive ? 'text-white' : 'text-gray-600'}`} />
+                <IconComponent className={`w-6 h-6 ${isActive ? 'text-white' : 'text-white/80'}`} />
               )}
             </button>
           );
