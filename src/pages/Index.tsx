@@ -75,7 +75,7 @@ const Index = () => {
   const { currentIndex, scrollToProduct } = useProductSlider(products.length);
 
   return (
-    <div className="relative">
+    <div className="relative min-h-screen bg-gradient-to-b from-white to-gray-100">
       {/* 顶部导航栏 */}
       <Header />
       

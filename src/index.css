@@ -40,7 +40,7 @@ All colors MUST be HSL.
     
     /* Custom gradients */
     --gradient-hero: linear-gradient(135deg, hsl(217 91% 60%), hsl(224 76% 48%));
-    --gradient-bg: linear-gradient(180deg, hsl(218 25% 97%), hsl(210 20% 92%));
+    --gradient-bg: linear-gradient(180deg, hsl(0 0% 98%), hsl(0 0% 95%));
 
     --sidebar-background: 0 0% 98%;
 
