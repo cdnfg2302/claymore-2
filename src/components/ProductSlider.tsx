@@ -45,20 +45,20 @@ const ProductSlider = ({ products, currentIndex }: ProductSliderProps) => {
             id={`product-${index}`}
             className="min-h-screen flex items-center justify-center px-4 py-16"
             style={{
-              background: index === 0 ? 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' :
-                         index === 1 ? 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)' :
-                         index === 2 ? 'linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)' :
-                         index === 3 ? 'linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)' :
-                         index === 4 ? 'linear-gradient(135deg, #a8e6cf 0%, #dcedc1 100%)' :
-                         index === 5 ? 'linear-gradient(135deg, #ffd89b 0%, #19547b 100%)' :
-                         index === 6 ? 'linear-gradient(135deg, #c2e9fb 0%, #a1c4fd 100%)' :
-                         'linear-gradient(135deg, #d299c2 0%, #fef9d7 100%)'
+              background: index === 0 ? 'linear-gradient(135deg, #f8fafc 0%, #e2e8f0 30%, #cbd5e1 100%)' :
+                         index === 1 ? 'linear-gradient(135deg, #fdf2f8 0%, #fce7f3 30%, #f3e8ff 100%)' :
+                         index === 2 ? 'linear-gradient(135deg, #f0fdf4 0%, #dcfce7 30%, #bbf7d0 100%)' :
+                         index === 3 ? 'linear-gradient(135deg, #fffbeb 0%, #fef3c7 30%, #fde68a 100%)' :
+                         index === 4 ? 'linear-gradient(135deg, #fef2f2 0%, #fecaca 30%, #fca5a5 100%)' :
+                         index === 5 ? 'linear-gradient(135deg, #eff6ff 0%, #dbeafe 30%, #bfdbfe 100%)' :
+                         index === 6 ? 'linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 30%, #bae6fd 100%)' :
+                         'linear-gradient(135deg, #fafaf9 0%, #f5f5f4 30%, #e7e5e4 100%)'
             }}
           >
             <div className="max-w-7xl mx-auto w-full">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
                 {/* 左侧内容 */}
-                <div className="text-white space-y-8 animate-fade-in">
+                <div className="text-gray-800 space-y-8 animate-fade-in">
                   <div className="space-y-4">
                     <div className="flex items-center gap-4">
                       <div className={`w-16 h-16 ${product.iconColor} rounded-2xl flex items-center justify-center`}>
@@ -74,26 +74,26 @@ const ProductSlider = ({ products, currentIndex }: ProductSliderProps) => {
                       <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
                         {product.title}
                       </h1>
-                      <p className="text-xl text-white/80 font-medium uppercase tracking-wide">
+                      <p className="text-lg text-gray-600 font-medium uppercase tracking-wide">
                         {product.subtitle}
                       </p>
                     </div>
                   </div>
                   
-                  <p className="text-xl leading-relaxed text-white/90 max-w-2xl">
+                  <p className="text-xl leading-relaxed text-gray-700 max-w-2xl">
                     {product.description}
                   </p>
                   
                   <div className="grid grid-cols-2 gap-4">
                     {product.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center">
-                        <div className="w-2 h-2 bg-white/60 rounded-full mr-3"></div>
-                        <span className="text-white/90">{feature}</span>
+                        <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                        <span className="text-gray-600">{feature}</span>
                       </div>
                     ))}
                   </div>
                   
-                  <button className="bg-white/20 backdrop-blur-sm border border-white/30 hover:bg-white/30 text-white px-8 py-4 rounded-xl font-medium text-lg transition-all duration-300 hover:shadow-lg hover:scale-105">
+                  <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-medium text-lg transition-all duration-300 hover:shadow-lg hover:scale-105">
                     了解更多
                   </button>
                 </div>
