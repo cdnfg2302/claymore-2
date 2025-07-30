@@ -84,7 +84,7 @@ const Index = () => {
 
       {/* Products Grid */}
       <section className="py-16 px-4 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[1400px] mx-auto">
           <div className="space-y-8">
             {products.map((product, index) => {
               const IconComponent = product.icon;
