@@ -128,16 +128,9 @@ const Index = () => {
                         <img 
                           src={product.title === "Claymore聊天智能体" ? "/lovable-uploads/29bbd104-a828-4728-b204-b0995826e1e5.png" : product.title === "绘画智能体" ? "/lovable-uploads/ccac6ac9-4166-4947-afaa-4771687a9eff.png" : product.title === "换脸智能体" ? "/lovable-uploads/805d49ac-22eb-45c0-b51b-06c840c620d4.png" : product.title === "智能硬件ESP32开发板" ? "/lovable-uploads/2a09496d-0a60-4d07-a634-803c7ba0ef26.png" : product.title === "TikTok直播数据获取工具" ? "/lovable-uploads/7eeaf74c-c58f-40b9-be5d-7757d1586572.png" : product.title === "VidLingual多语言翻译工具" ? "/lovable-uploads/89e6d498-5788-4574-b8b2-6ad46bf8b710.png" : product.title === "电话外呼智能体" ? "/lovable-uploads/66e42bea-a48f-4141-9f5b-58860fd31d51.png" : product.title === "Claymore智能菜单" ? "/lovable-uploads/1ef9462a-4977-41ba-9ccb-cb4e845d3b95.png" : "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2"} 
                           alt={product.title}
-                          className="w-full h-full object-cover opacity-80"
+                          className="w-full h-full object-cover"
                         />
                         
-                        {/* Tech network overlay */}
-                        <div className="absolute inset-0 opacity-30">
-                          <div className="absolute top-4 left-4 w-2 h-2 bg-blue-300 rounded-full animate-pulse"></div>
-                          <div className="absolute top-8 right-8 w-1 h-1 bg-blue-200 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
-                          <div className="absolute bottom-6 left-6 w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
-                          <div className="absolute bottom-8 right-6 w-1 h-1 bg-blue-200 rounded-full animate-pulse" style={{animationDelay: '1.5s'}}></div>
-                        </div>
                       </div>
                     </div>
                   </div>
