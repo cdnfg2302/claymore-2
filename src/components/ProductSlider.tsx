@@ -57,8 +57,8 @@ const ProductSlider = ({ products, currentIndex }: ProductSliderProps) => {
           >
             <div className="max-w-7xl mx-auto w-full">
               <div className="grid grid-cols-1 lg:grid-cols-8 gap-12 items-center min-h-[80vh]">
-                {/* 左侧内容 - 5份 */}
-                <div className="text-gray-800 space-y-8 animate-fade-in lg:col-span-5">
+                {/* 左侧内容 - 3份 */}
+                <div className="text-gray-800 space-y-8 animate-fade-in lg:col-span-3">
                   <div className="space-y-4">
                     <div className="flex items-center gap-4">
                       <div className={`w-16 h-16 ${product.iconColor} rounded-2xl flex items-center justify-center`}>
@@ -98,8 +98,8 @@ const ProductSlider = ({ products, currentIndex }: ProductSliderProps) => {
                   </button>
                 </div>
                 
-                {/* 右侧图片 - 3份 */}
-                <div className="relative animate-fade-in lg:col-span-3" style={{ animationDelay: '0.2s' }}>
+                {/* 右侧图片 - 5份 */}
+                <div className="relative animate-fade-in lg:col-span-5" style={{ animationDelay: '0.2s' }}>
                   <div className="relative h-64 lg:h-80 bg-gradient-to-br from-black/20 to-transparent rounded-xl overflow-hidden shadow-lg">
                     <img 
                       src={getProductImage(product.title)}
