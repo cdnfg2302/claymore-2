@@ -35,82 +35,89 @@ const ProductSlider = ({ products, currentIndex }: ProductSliderProps) => {
   };
 
   return (
-    <div className="relative">
-      {products.map((product, index) => {
-        const IconComponent = product.icon;
-        
-        return (
-          <section
-            key={index}
-            id={`product-${index}`}
-            className="min-h-screen flex items-center justify-center px-4 py-16"
-            style={{
-              background: 'linear-gradient(135deg, #f8fafc 0%, #f1f5f9 30%, #e2e8f0 100%)'
-            }}
-          >
-            <div className="max-w-7xl mx-auto w-full">
-              <div className="grid grid-cols-1 lg:grid-cols-8 gap-12 items-center min-h-[80vh]">
-                {/* 左侧内容 - 3份 */}
-                <div className="text-gray-800 space-y-8 animate-fade-in lg:col-span-3">
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-4">
-                      <div className={`w-16 h-16 ${product.iconColor} rounded-2xl flex items-center justify-center`}>
-                        {product.title === "VidLingual多语言翻译工具" ? (
-                          <img src="/lovable-uploads/12db14f5-4309-4dc4-9981-7aa0e853233c.png" alt="Video icon" className="w-8 h-8" />
-                        ) : (
-                          <IconComponent className="w-8 h-8 text-white" />
-                        )}
+    <div className="relative overflow-hidden">
+      <div 
+        className="transition-transform duration-1000 ease-in-out"
+        style={{
+          transform: `translateY(-${currentIndex * 100}vh)`,
+        }}
+      >
+        {products.map((product, index) => {
+          const IconComponent = product.icon;
+          
+          return (
+            <section
+              key={index}
+              id={`product-${index}`}
+              className="h-screen flex items-center justify-center px-4 py-16"
+              style={{
+                background: 'linear-gradient(135deg, #f8fafc 0%, #f1f5f9 30%, #e2e8f0 100%)'
+              }}
+            >
+              <div className="max-w-7xl mx-auto w-full">
+                <div className="grid grid-cols-1 lg:grid-cols-8 gap-12 items-center h-full">
+                  {/* 左侧内容 - 3份 */}
+                  <div className="text-gray-800 space-y-8 animate-fade-in lg:col-span-3">
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-4">
+                        <div className={`w-16 h-16 ${product.iconColor} rounded-2xl flex items-center justify-center`}>
+                          {product.title === "VidLingual多语言翻译工具" ? (
+                            <img src="/lovable-uploads/12db14f5-4309-4dc4-9981-7aa0e853233c.png" alt="Video icon" className="w-8 h-8" />
+                          ) : (
+                            <IconComponent className="w-8 h-8 text-white" />
+                          )}
+                        </div>
+                      </div>
+                      
+                      <div>
+                        <h1 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
+                          {product.title}
+                        </h1>
+                        <p className="text-lg text-gray-600 font-medium uppercase tracking-wide">
+                          {product.subtitle}
+                        </p>
                       </div>
                     </div>
                     
-                    <div>
-                      <h1 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
-                        {product.title}
-                      </h1>
-                      <p className="text-lg text-gray-600 font-medium uppercase tracking-wide">
-                        {product.subtitle}
-                      </p>
+                    <p className="text-xl leading-relaxed text-gray-700 max-w-2xl">
+                      {product.description}
+                    </p>
+                    
+                    <div className="grid grid-cols-2 gap-4">
+                      {product.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center">
+                          <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                          <span className="text-gray-600">{feature}</span>
+                        </div>
+                      ))}
                     </div>
+                    
+                    <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-medium text-lg transition-all duration-300 hover:shadow-lg hover:scale-105">
+                      了解更多
+                    </button>
                   </div>
                   
-                  <p className="text-xl leading-relaxed text-gray-700 max-w-2xl">
-                    {product.description}
-                  </p>
-                  
-                  <div className="grid grid-cols-2 gap-4">
-                    {product.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center">
-                        <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                        <span className="text-gray-600">{feature}</span>
-                      </div>
-                    ))}
+                  {/* 右侧图片 - 5份 */}
+                  <div className="relative animate-fade-in lg:col-span-5" style={{ animationDelay: '0.2s' }}>
+                    <div className="relative aspect-[4/3] w-full bg-gradient-to-br from-black/20 to-transparent rounded-xl overflow-hidden shadow-lg">
+                      <img 
+                        src={getProductImage(product.title)}
+                        alt={product.title}
+                        className={`w-full h-full object-cover ${getImageAlignment(product.title)}`}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    </div>
+                    
+                    {/* 装饰性元素 */}
+                    <div className="absolute -top-4 -right-4 w-24 h-24 bg-white/10 rounded-full blur-xl"></div>
+                    <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-white/5 rounded-full blur-2xl"></div>
                   </div>
-                  
-                  <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-medium text-lg transition-all duration-300 hover:shadow-lg hover:scale-105">
-                    了解更多
-                  </button>
-                </div>
-                
-                {/* 右侧图片 - 5份 */}
-                <div className="relative animate-fade-in lg:col-span-5" style={{ animationDelay: '0.2s' }}>
-                  <div className="relative aspect-[4/3] w-full bg-gradient-to-br from-black/20 to-transparent rounded-xl overflow-hidden shadow-lg">
-                    <img 
-                      src={getProductImage(product.title)}
-                      alt={product.title}
-                      className={`w-full h-full object-cover ${getImageAlignment(product.title)}`}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                  </div>
-                  
-                  {/* 装饰性元素 */}
-                  <div className="absolute -top-4 -right-4 w-24 h-24 bg-white/10 rounded-full blur-xl"></div>
-                  <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-white/5 rounded-full blur-2xl"></div>
                 </div>
               </div>
-            </div>
-          </section>
-        );
-      })}
+            </section>
+          );
+        })}
+      </div>
     </div>
   );
 };

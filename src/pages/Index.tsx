@@ -80,7 +80,7 @@ const Index = () => {
       <Header />
       
       {/* 产品滑动区域 - 添加顶部间距 */}
-      <div className="pt-20">
+      <div className="pt-40">
         <ProductSlider products={products} currentIndex={currentIndex} />
       </div>
       
