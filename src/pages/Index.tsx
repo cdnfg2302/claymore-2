@@ -126,7 +126,7 @@ const Index = () => {
                       {/* 右侧图片 */}
                       <div className="relative h-64 lg:h-80 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 rounded-xl overflow-hidden">
                         <img 
-                          src={product.title === "TikTok直播数据获取工具" ? "/lovable-uploads/7eeaf74c-c58f-40b9-be5d-7757d1586572.png" : product.title === "VidLingual多语言翻译工具" ? "/lovable-uploads/89e6d498-5788-4574-b8b2-6ad46bf8b710.png" : "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2"} 
+                          src={product.title === "TikTok直播数据获取工具" ? "/lovable-uploads/7eeaf74c-c58f-40b9-be5d-7757d1586572.png" : product.title === "VidLingual多语言翻译工具" ? "/lovable-uploads/89e6d498-5788-4574-b8b2-6ad46bf8b710.png" : product.title === "电话外呼智能体" ? "/lovable-uploads/66e42bea-a48f-4141-9f5b-58860fd31d51.png" : "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2"} 
                           alt={product.title}
                           className="w-full h-full object-cover opacity-80"
                         />
