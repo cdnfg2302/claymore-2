@@ -85,58 +85,64 @@ const Index = () => {
       {/* Products Grid */}
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="space-y-8">
             {products.map((product, index) => {
               const IconComponent = product.icon;
               return (
                 <div key={index} className="group">
-                  <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 h-full">
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="flex items-center gap-4">
-                        <div className={`w-12 h-12 ${product.iconColor} rounded-xl flex items-center justify-center`}>
-                          <IconComponent className="w-6 h-6 text-white" />
+                  <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                      {/* 左侧内容 */}
+                      <div className="space-y-6">
+                        <div className="flex items-start justify-between">
+                          <div className="flex items-center gap-4">
+                            <div className={`w-12 h-12 ${product.iconColor} rounded-xl flex items-center justify-center`}>
+                              <IconComponent className="w-6 h-6 text-white" />
+                            </div>
+                            <div>
+                              <h3 className="text-2xl font-bold text-gray-900 mb-1">{product.title}</h3>
+                              <p className="text-sm text-gray-500 font-medium uppercase tracking-wide">{product.subtitle}</p>
+                            </div>
+                          </div>
+                          <div className="text-gray-400 group-hover:text-gray-600 group-hover:translate-x-1 transition-all">
+                            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                            </svg>
+                          </div>
                         </div>
-                        <div>
-                          <h3 className="text-xl font-bold text-gray-900 mb-1">{product.title}</h3>
-                          <p className="text-sm text-gray-500 font-medium uppercase tracking-wide">{product.subtitle}</p>
+                        
+                        <p className="text-gray-600 leading-relaxed text-lg">{product.description}</p>
+                        
+                        <div className="grid grid-cols-2 gap-3">
+                          {product.features.map((feature, featureIndex) => (
+                            <div key={featureIndex} className="flex items-center text-sm">
+                              <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></div>
+                              <span className="text-gray-700">{feature}</span>
+                            </div>
+                          ))}
                         </div>
                       </div>
-                      <div className="text-gray-400 group-hover:text-gray-600 group-hover:translate-x-1 transition-all">
-                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                        </svg>
-                      </div>
-                    </div>
-                    
-                    <p className="text-gray-600 mb-6 leading-relaxed">{product.description}</p>
-                    
-                    <div className="grid grid-cols-2 gap-3 mb-6">
-                      {product.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center text-sm">
-                          <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></div>
-                          <span className="text-gray-700">{feature}</span>
+                      
+                      {/* 右侧图片 */}
+                      <div className="relative h-64 lg:h-80 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 rounded-xl overflow-hidden">
+                        <img 
+                          src={product.title === "TikTok直播数据获取工具" ? "/lovable-uploads/7eeaf74c-c58f-40b9-be5d-7757d1586572.png" : product.title === "VidLingual多语言翻译工具" ? "/lovable-uploads/89e6d498-5788-4574-b8b2-6ad46bf8b710.png" : "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2"} 
+                          alt={product.title}
+                          className="w-full h-full object-cover opacity-80"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent"></div>
+                        <div className="absolute top-4 right-4">
+                          <span className="bg-white/90 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">
+                            正在开发
+                          </span>
                         </div>
-                      ))}
-                    </div>
-                    
-                    <div className="relative h-48 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 rounded-xl overflow-hidden">
-                      <img 
-                        src={product.title === "TikTok直播数据获取工具" ? "/lovable-uploads/7eeaf74c-c58f-40b9-be5d-7757d1586572.png" : product.title === "VidLingual多语言翻译工具" ? "/lovable-uploads/89e6d498-5788-4574-b8b2-6ad46bf8b710.png" : "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2"} 
-                        alt={product.title}
-                        className="w-full h-full object-cover opacity-80"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent"></div>
-                      <div className="absolute top-4 right-4">
-                        <span className="bg-white/90 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">
-                          正在开发
-                        </span>
-                      </div>
-                      {/* Tech network overlay */}
-                      <div className="absolute inset-0 opacity-30">
-                        <div className="absolute top-4 left-4 w-2 h-2 bg-blue-300 rounded-full animate-pulse"></div>
-                        <div className="absolute top-8 right-8 w-1 h-1 bg-blue-200 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
-                        <div className="absolute bottom-6 left-6 w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
-                        <div className="absolute bottom-8 right-6 w-1 h-1 bg-blue-200 rounded-full animate-pulse" style={{animationDelay: '1.5s'}}></div>
+                        {/* Tech network overlay */}
+                        <div className="absolute inset-0 opacity-30">
+                          <div className="absolute top-4 left-4 w-2 h-2 bg-blue-300 rounded-full animate-pulse"></div>
+                          <div className="absolute top-8 right-8 w-1 h-1 bg-blue-200 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
+                          <div className="absolute bottom-6 left-6 w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+                          <div className="absolute bottom-8 right-6 w-1 h-1 bg-blue-200 rounded-full animate-pulse" style={{animationDelay: '1.5s'}}></div>
+                        </div>
                       </div>
                     </div>
                   </div>
