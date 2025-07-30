@@ -121,7 +121,7 @@ const Index = () => {
                     
                     <div className="relative h-48 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 rounded-xl overflow-hidden">
                       <img 
-                        src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2" 
+                        src={product.title === "TikTok直播数据获取工具" ? "/lovable-uploads/7eeaf74c-c58f-40b9-be5d-7757d1586572.png" : "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2"} 
                         alt={product.title}
                         className="w-full h-full object-cover opacity-80"
                       />
