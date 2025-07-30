@@ -10,7 +10,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/48931e29-77ca-4715-8237-a99260434656.png" 
               alt="Claymore AI Lab" 
-              className="h-20 w-auto"
+              className="h-25 w-auto"
             />
           </div>
           
