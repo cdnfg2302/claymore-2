@@ -97,7 +97,11 @@ const Index = () => {
                         <div className="flex items-start justify-between">
                           <div className="flex items-center gap-4">
                             <div className={`w-12 h-12 ${product.iconColor} rounded-xl flex items-center justify-center`}>
-                              <IconComponent className="w-6 h-6 text-white" />
+                              {product.title === "VidLingual多语言翻译工具" ? (
+                                <img src="/lovable-uploads/12db14f5-4309-4dc4-9981-7aa0e853233c.png" alt="Video icon" className="w-6 h-6" />
+                              ) : (
+                                <IconComponent className="w-6 h-6 text-white" />
+                              )}
                             </div>
                             <div>
                               <h3 className="text-2xl font-bold text-gray-900 mb-1">{product.title}</h3>
