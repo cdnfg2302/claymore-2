@@ -45,14 +45,7 @@ const ProductSlider = ({ products, currentIndex }: ProductSliderProps) => {
             id={`product-${index}`}
             className="min-h-screen flex items-center justify-center px-4 py-16"
             style={{
-              background: index === 0 ? 'linear-gradient(135deg, #f8fafc 0%, #e2e8f0 30%, #cbd5e1 100%)' :
-                         index === 1 ? 'linear-gradient(135deg, #fdf2f8 0%, #fce7f3 30%, #f3e8ff 100%)' :
-                         index === 2 ? 'linear-gradient(135deg, #f0fdf4 0%, #dcfce7 30%, #bbf7d0 100%)' :
-                         index === 3 ? 'linear-gradient(135deg, #fffbeb 0%, #fef3c7 30%, #fde68a 100%)' :
-                         index === 4 ? 'linear-gradient(135deg, #fef2f2 0%, #fecaca 30%, #fca5a5 100%)' :
-                         index === 5 ? 'linear-gradient(135deg, #eff6ff 0%, #dbeafe 30%, #bfdbfe 100%)' :
-                         index === 6 ? 'linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 30%, #bae6fd 100%)' :
-                         'linear-gradient(135deg, #fafaf9 0%, #f5f5f4 30%, #e7e5e4 100%)'
+              background: 'linear-gradient(135deg, #f8fafc 0%, #f1f5f9 30%, #e2e8f0 100%)'
             }}
           >
             <div className="max-w-7xl mx-auto w-full">

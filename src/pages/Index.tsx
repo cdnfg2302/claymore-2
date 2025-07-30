@@ -92,7 +92,7 @@ const Index = () => {
       />
       
       {/* 底部功能栏 - 恢复原本的CTA区域 */}
-      <section className="py-20 px-4 bg-gradient-to-br from-slate-50 to-gray-100">
+      <section className="py-20 px-4 bg-gradient-to-br from-gray-50 to-gray-100">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">开启AI智能化之旅</h2>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
