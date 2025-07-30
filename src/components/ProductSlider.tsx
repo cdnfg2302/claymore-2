@@ -100,7 +100,7 @@ const ProductSlider = ({ products, currentIndex }: ProductSliderProps) => {
                 
                 {/* 右侧图片 - 3份 */}
                 <div className="relative animate-fade-in lg:col-span-3" style={{ animationDelay: '0.2s' }}>
-                  <div className="relative h-[500px] lg:h-[600px] bg-gradient-to-br from-black/20 to-transparent rounded-3xl overflow-hidden shadow-2xl">
+                  <div className="relative h-64 lg:h-80 bg-gradient-to-br from-black/20 to-transparent rounded-xl overflow-hidden shadow-lg">
                     <img 
                       src={getProductImage(product.title)}
                       alt={product.title}
