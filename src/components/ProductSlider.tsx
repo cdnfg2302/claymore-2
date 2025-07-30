@@ -45,20 +45,20 @@ const ProductSlider = ({ products, currentIndex }: ProductSliderProps) => {
             id={`product-${index}`}
             className="min-h-screen flex items-center justify-center px-4 py-16"
             style={{
-              background: index === 0 ? 'linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%)' : // 聊天智能体-蓝色系(类似微信)
-                         index === 1 ? 'linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #c084fc 100%)' : // 绘画智能体-紫色系(创意)
-                         index === 2 ? 'linear-gradient(135deg, #059669 0%, #10b981 50%, #34d399 100%)' : // 换脸智能体-绿色系(活力)
-                         index === 3 ? 'linear-gradient(135deg, #ea580c 0%, #f97316 50%, #fb923c 100%)' : // 智能菜单-橙色系(美食)
-                         index === 4 ? 'linear-gradient(135deg, #dc2626 0%, #ef4444 50%, #f87171 100%)' : // 电话外呼-红色系(热情)
-                         index === 5 ? 'linear-gradient(135deg, #0891b2 0%, #0ea5e9 50%, #38bdf8 100%)' : // 多语言翻译-青色系(全球化)
-                         index === 6 ? 'linear-gradient(135deg, #be185d 0%, #e91e63 50%, #f472b6 100%)' : // TikTok数据-粉色系(类似TikTok)
-                         'linear-gradient(135deg, #374151 0%, #4b5563 50%, #6b7280 100%)' // ESP32硬件-灰色系(科技感)
+              background: index === 0 ? 'linear-gradient(135deg, #f8fafc 0%, #e2e8f0 30%, #cbd5e1 100%)' :
+                         index === 1 ? 'linear-gradient(135deg, #fdf2f8 0%, #fce7f3 30%, #f3e8ff 100%)' :
+                         index === 2 ? 'linear-gradient(135deg, #f0fdf4 0%, #dcfce7 30%, #bbf7d0 100%)' :
+                         index === 3 ? 'linear-gradient(135deg, #fffbeb 0%, #fef3c7 30%, #fde68a 100%)' :
+                         index === 4 ? 'linear-gradient(135deg, #fef2f2 0%, #fecaca 30%, #fca5a5 100%)' :
+                         index === 5 ? 'linear-gradient(135deg, #eff6ff 0%, #dbeafe 30%, #bfdbfe 100%)' :
+                         index === 6 ? 'linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 30%, #bae6fd 100%)' :
+                         'linear-gradient(135deg, #fafaf9 0%, #f5f5f4 30%, #e7e5e4 100%)'
             }}
           >
             <div className="max-w-7xl mx-auto w-full">
               <div className="grid grid-cols-1 lg:grid-cols-8 gap-12 items-center min-h-[80vh]">
                 {/* 左侧内容 - 3份 */}
-                <div className="text-white space-y-8 animate-fade-in lg:col-span-3">
+                <div className="text-gray-800 space-y-8 animate-fade-in lg:col-span-3">
                   <div className="space-y-4">
                     <div className="flex items-center gap-4">
                       <div className={`w-16 h-16 ${product.iconColor} rounded-2xl flex items-center justify-center`}>
@@ -74,26 +74,26 @@ const ProductSlider = ({ products, currentIndex }: ProductSliderProps) => {
                       <h1 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
                         {product.title}
                       </h1>
-                      <p className="text-lg text-white/90 font-medium uppercase tracking-wide">
+                      <p className="text-lg text-gray-600 font-medium uppercase tracking-wide">
                         {product.subtitle}
                       </p>
                     </div>
                   </div>
                   
-                  <p className="text-xl leading-relaxed text-white/95 max-w-2xl">
+                  <p className="text-xl leading-relaxed text-gray-700 max-w-2xl">
                     {product.description}
                   </p>
                   
                   <div className="grid grid-cols-2 gap-4">
                     {product.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center">
-                        <div className="w-2 h-2 bg-white/80 rounded-full mr-3"></div>
-                        <span className="text-white/90">{feature}</span>
+                        <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                        <span className="text-gray-600">{feature}</span>
                       </div>
                     ))}
                   </div>
                   
-                  <button className="bg-white/20 backdrop-blur-sm border border-white/30 hover:bg-white/30 text-white px-8 py-4 rounded-xl font-medium text-lg transition-all duration-300 hover:shadow-lg hover:scale-105">
+                  <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-medium text-lg transition-all duration-300 hover:shadow-lg hover:scale-105">
                     了解更多
                   </button>
                 </div>
