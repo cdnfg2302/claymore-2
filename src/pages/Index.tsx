@@ -131,11 +131,6 @@ const Index = () => {
                           className="w-full h-full object-cover opacity-80"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent"></div>
-                        <div className="absolute top-4 right-4">
-                          <span className="bg-white/90 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">
-                            正在开发
-                          </span>
-                        </div>
                         {/* Tech network overlay */}
                         <div className="absolute inset-0 opacity-30">
                           <div className="absolute top-4 left-4 w-2 h-2 bg-blue-300 rounded-full animate-pulse"></div>
