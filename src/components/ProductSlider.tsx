@@ -71,7 +71,7 @@ const ProductSlider = ({ products, currentIndex }: ProductSliderProps) => {
                     </div>
                     
                     <div>
-                      <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
+                      <h1 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
                         {product.title}
                       </h1>
                       <p className="text-lg text-gray-600 font-medium uppercase tracking-wide">
