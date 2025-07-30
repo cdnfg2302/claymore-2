@@ -3,14 +3,14 @@ import React from 'react';
 const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
-      <div className="max-w-full mx-auto px-8 sm:px-12 lg:px-16">
-        <div className="flex justify-between items-center h-20">
+      <div className="max-w-full mx-auto px-12 sm:px-16 lg:px-24">
+        <div className="flex justify-between items-center h-24">
           {/* Logo */}
           <div className="flex items-center">
             <img 
               src="/lovable-uploads/48931e29-77ca-4715-8237-a99260434656.png" 
               alt="Claymore AI Lab" 
-              className="h-20 w-auto"
+              className="h-24 w-auto"
             />
           </div>
           
