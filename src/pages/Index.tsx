@@ -1,6 +1,7 @@
 import { MessageSquare, Palette, Users, Utensils, Phone, Globe, BarChart3, Cpu } from "lucide-react";
 import ProductSlider from "../components/ProductSlider";
 import ProductNavigation from "../components/ProductNavigation";
+import Header from "../components/Header";
 import { useProductSlider } from "../hooks/useProductSlider";
 
 const Index = () => {
@@ -75,8 +76,13 @@ const Index = () => {
 
   return (
     <div className="relative">
-      {/* 产品滑动区域 */}
-      <ProductSlider products={products} currentIndex={currentIndex} />
+      {/* 顶部导航栏 */}
+      <Header />
+      
+      {/* 产品滑动区域 - 添加顶部间距 */}
+      <div className="pt-16">
+        <ProductSlider products={products} currentIndex={currentIndex} />
+      </div>
       
       {/* 右侧导航 */}
       <ProductNavigation 
