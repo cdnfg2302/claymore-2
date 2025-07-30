@@ -91,9 +91,9 @@ const Index = () => {
               return (
                 <div key={index} className="group">
                   <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
                       {/* 左侧内容 */}
-                      <div className="space-y-6">
+                      <div className="space-y-6 lg:col-span-2">
                         <div className="flex items-start justify-between">
                           <div className="flex items-center gap-4">
                             <div className={`w-12 h-12 ${product.iconColor} rounded-xl flex items-center justify-center`}>
