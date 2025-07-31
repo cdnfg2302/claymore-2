@@ -49,7 +49,7 @@ const ProductSlider = ({ products, currentIndex }: ProductSliderProps) => {
             <section
               key={index}
               id={`product-${index}`}
-              className="h-screen flex items-center justify-center px-4 py-16 relative overflow-hidden"
+              className="h-screen flex items-center justify-center px-4 relative overflow-hidden"
               style={{
                 background: 'linear-gradient(135deg, #87CEEB 0%, #B0E0E6 50%, #F0F8FF 100%)'
               }}
