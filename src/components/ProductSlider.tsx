@@ -115,7 +115,7 @@ const ProductSlider = ({ products, currentIndex }: ProductSliderProps) => {
                   </div>
                   
                   {/* 右侧图片 - 5份 */}
-                  <div className="relative animate-fade-in lg:col-span-5" style={{ animationDelay: '0.2s' }}>
+                  <div className={`relative animate-fade-in lg:col-span-5 ${product.title === "换脸智能体" ? "-ml-12" : ""}`} style={{ animationDelay: '0.2s' }}>
                     <div className="relative aspect-[4/3] w-full bg-gradient-to-br from-black/20 to-transparent rounded-xl overflow-hidden shadow-lg">
                       <img 
                         src={getProductImage(product.title)}
