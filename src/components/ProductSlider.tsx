@@ -119,7 +119,7 @@ const ProductSlider = ({ products, currentIndex }: ProductSliderProps) => {
                       <img 
                         src={getProductImage(product.title)}
                         alt={product.title}
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-cover"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                     </div>
