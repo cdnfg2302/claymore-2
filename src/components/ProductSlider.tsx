@@ -32,7 +32,7 @@ const ProductSlider = ({ products, currentIndex }: ProductSliderProps) => {
   const getImageAlignment = (title: string) => {
     return (title === "电话外呼智能体") ? "object-left" : 
            (title === "VidLingual多语言翻译工具") ? "object-top" :
-           (title === "TikTok直播数据获取工具") ? "object-center" : "object-left";
+           (title === "TikTok直播数据获取工具") ? "object-left" : "object-left";
   };
 
   return (
