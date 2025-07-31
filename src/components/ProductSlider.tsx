@@ -70,7 +70,7 @@ const ProductSlider = ({ products, currentIndex }: ProductSliderProps) => {
               <div className="max-w-7xl mx-auto w-full">
                 <div className="grid grid-cols-1 lg:grid-cols-8 gap-52 items-center h-full">
                   {/* 左侧内容 - 3份 */}
-                  <div className="text-gray-800 space-y-8 animate-fade-in lg:col-span-3">
+                  <div className="text-gray-800 space-y-8 animate-fade-in lg:col-span-3 text-left">
                     <div className="space-y-4">
                       <div className="flex items-center gap-4">
                         <div className={`w-16 h-16 ${product.iconColor} rounded-2xl flex items-center justify-center`}>
