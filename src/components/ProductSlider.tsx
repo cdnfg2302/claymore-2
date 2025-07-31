@@ -67,7 +67,7 @@ const ProductSlider = ({ products, currentIndex }: ProductSliderProps) => {
                 <div className="absolute top-16 right-80 text-gray-100/[0.02] text-9xl font-bold transform -rotate-30">C</div>
                 <div className="absolute bottom-16 left-80 text-gray-100/[0.03] text-8xl font-bold transform rotate-15">L</div>
               </div>
-              <div className="max-w-7xl mx-auto w-full">
+              <div className="max-w-7xl mx-auto w-full -mt-16">
                 <div className="grid grid-cols-1 lg:grid-cols-8 gap-52 items-center h-full">
                   {/* 左侧内容 - 3份 */}
                   <div className="text-gray-800 space-y-8 animate-fade-in lg:col-span-3 text-left">
