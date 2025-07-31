@@ -51,7 +51,10 @@ const ProductSlider = ({ products, currentIndex }: ProductSliderProps) => {
               id={`product-${index}`}
               className="h-screen flex items-center justify-center px-4 relative overflow-hidden"
               style={{
-                background: 'linear-gradient(135deg, #87CEEB 0%, #B0E0E6 50%, #F0F8FF 100%)'
+                backgroundImage: 'url(/lovable-uploads/c34b5242-e3ca-4c8a-89bf-9c0a8f902eb4.png)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
               }}
             >
               {/* 背景字母效果 */}
