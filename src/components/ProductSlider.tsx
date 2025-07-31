@@ -56,16 +56,16 @@ const ProductSlider = ({ products, currentIndex }: ProductSliderProps) => {
             >
               {/* 背景字母效果 */}
               <div className="absolute inset-0 pointer-events-none">
-                <div className="absolute top-10 left-10 text-white/8 text-8xl font-bold transform -rotate-12">C</div>
-                <div className="absolute top-32 right-32 text-white/6 text-6xl font-bold transform rotate-45">L</div>
-                <div className="absolute top-64 left-64 text-white/5 text-9xl font-bold transform -rotate-6">A</div>
-                <div className="absolute bottom-48 right-16 text-white/7 text-7xl font-bold transform rotate-12">Y</div>
-                <div className="absolute bottom-32 left-32 text-white/6 text-5xl font-bold transform -rotate-24">M</div>
-                <div className="absolute top-48 right-64 text-white/5 text-8xl font-bold transform rotate-30">O</div>
-                <div className="absolute bottom-64 right-48 text-white/8 text-6xl font-bold transform -rotate-18">R</div>
-                <div className="absolute top-80 left-48 text-white/7 text-7xl font-bold transform rotate-8">E</div>
-                <div className="absolute top-16 right-80 text-white/6 text-9xl font-bold transform -rotate-30">C</div>
-                <div className="absolute bottom-16 left-80 text-white/5 text-8xl font-bold transform rotate-15">L</div>
+                <div className="absolute top-10 left-10 text-gray-100/[0.02] text-8xl font-bold transform -rotate-12">C</div>
+                <div className="absolute top-32 right-32 text-gray-100/[0.03] text-6xl font-bold transform rotate-45">L</div>
+                <div className="absolute top-64 left-64 text-gray-100/[0.02] text-9xl font-bold transform -rotate-6">A</div>
+                <div className="absolute bottom-48 right-16 text-gray-100/[0.03] text-7xl font-bold transform rotate-12">Y</div>
+                <div className="absolute bottom-32 left-32 text-gray-100/[0.02] text-5xl font-bold transform -rotate-24">M</div>
+                <div className="absolute top-48 right-64 text-gray-100/[0.03] text-8xl font-bold transform rotate-30">O</div>
+                <div className="absolute bottom-64 right-48 text-gray-100/[0.02] text-6xl font-bold transform -rotate-18">R</div>
+                <div className="absolute top-80 left-48 text-gray-100/[0.03] text-7xl font-bold transform rotate-8">E</div>
+                <div className="absolute top-16 right-80 text-gray-100/[0.02] text-9xl font-bold transform -rotate-30">C</div>
+                <div className="absolute bottom-16 left-80 text-gray-100/[0.03] text-8xl font-bold transform rotate-15">L</div>
               </div>
               <div className="max-w-7xl mx-auto w-full">
                 <div className="grid grid-cols-1 lg:grid-cols-8 gap-16 items-center h-full">
