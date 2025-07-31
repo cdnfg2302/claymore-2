@@ -31,7 +31,8 @@ const ProductSlider = ({ products, currentIndex }: ProductSliderProps) => {
 
   const getImageAlignment = (title: string) => {
     return (title === "电话外呼智能体") ? "object-left" : 
-           (title === "VidLingual多语言翻译工具") ? "object-top" : "";
+           (title === "VidLingual多语言翻译工具") ? "object-top" :
+           (title === "TikTok直播数据获取工具") ? "object-center" : "object-left";
   };
 
   return (
@@ -119,7 +120,7 @@ const ProductSlider = ({ products, currentIndex }: ProductSliderProps) => {
                       <img 
                         src={getProductImage(product.title)}
                         alt={product.title}
-                        className="w-full h-full object-cover object-left"
+                        className={`w-full h-full object-cover ${getImageAlignment(product.title)}`}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                     </div>
