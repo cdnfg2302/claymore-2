@@ -91,24 +91,24 @@ const Index = () => {
         onProductSelect={scrollToProduct}
       />
       
-      {/* 底部功能栏 - 恢复原本的CTA区域 */}
-      <section className="py-20 px-4 bg-gradient-to-br from-gray-50 to-gray-100">
+      {/* 底部功能栏 */}
+      <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">开启AI智能化之旅</h2>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
             我们的产品矩阵覆盖了从对话交互到视觉创作，从数据分析到硬件开发的全方位AI解决方案。每一个产品都经过精心打磨，致力于为用户提供最优质的智能化体验。
           </p>
           
-          <div className="flex flex-wrap justify-center gap-8 mb-12">
+          <div className="flex flex-wrap justify-center gap-12 mb-12">
             {["全球化部署", "高性能处理", "企业级安全"].map((feature, index) => (
-              <div key={index} className="flex items-center text-gray-600">
-                <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                <span>{feature}</span>
+              <div key={index} className="flex items-center text-gray-700">
+                <div className="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
+                <span className="text-lg font-medium">{feature}</span>
               </div>
             ))}
           </div>
           
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-medium text-lg transition-all duration-300 hover:shadow-lg">
+          <button className="bg-blue-500 hover:bg-blue-600 text-white px-10 py-4 rounded-full font-medium text-lg transition-all duration-300 hover:shadow-lg">
             联系我们了解更多
           </button>
         </div>
